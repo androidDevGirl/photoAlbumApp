@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_user_profile"
+    tools:context="com.example.macdev.parserdemo2.SignUpActivity"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Profile"
+        android:id="@+id/textViewLogInProfile"
+        android:layout_alignParentTop="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextUserNameSignUpProfile"
+        android:hint="User First Last Name"
+        android:layout_below="@+id/textViewLogInProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextUserPasswordSignUpProfile"
+        android:hint="Password"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editTextUserNameSignUpProfile"
+        android:editable="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Profile"
+        android:id="@+id/buttonSignUpNowProfile"
+        android:layout_marginTop="39dp"
+        android:layout_below="@+id/gender_groupProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextPassConfirmProfile"
+        android:layout_below="@+id/editTextUserPasswordSignUpProfile"
+        android:layout_centerHorizontal="true"
+        android:hint="Confirm Password" />
+
+    <RadioGroup android:layout_height="wrap_content" android:id="@+id/gender_groupProfile"
+        android:layout_width="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/textViewLogInProfile"
+        android:layout_toStartOf="@+id/textViewLogInProfile">
+        <RadioButton android:text="Male"
+            android:layout_width="wrap_content" android:id="@+id/radioMaleProfile"
+            android:layout_height="wrap_content" android:checked="true"
+            android:clickable="true"></RadioButton>
+
+        <RadioButton android:text="Female"
+            android:layout_width="wrap_content" android:id="@+id/radioFemaleProfile"
+            android:layout_height="wrap_content"
+            android:clickable="true"></RadioButton>
+
+
+
+    </RadioGroup>
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/imageViewAvatarProfile"
+        android:layout_gravity="right"
+        android:clickable="true"
+        android:src="@drawable/avatar"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/textViewLogInProfile"
+        android:layout_toEndOf="@+id/textViewLogInProfile" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:id="@+id/buttonCancelSignUpProfile"
+        android:layout_below="@+id/buttonSignUpNowProfile"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
